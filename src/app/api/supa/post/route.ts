@@ -10,7 +10,7 @@ export const POST = async (req: NextRequest) => {
 
     const { error } = await supabase
         .from('test')
-        .insert({ Name: data.Name, LastName: data.LastName  })
+        .insert({ Name: data.Name, LastName: data.LastName, comment: data.comment })
 
     return NextResponse.json(data)
 }
